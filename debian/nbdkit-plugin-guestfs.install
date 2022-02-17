@@ -1,0 +1,2 @@
+/usr/lib/*-*/nbdkit/plugins/nbdkit-guestfs-plugin.so
+/usr/share/man/man1/nbdkit-guestfs-plugin.1

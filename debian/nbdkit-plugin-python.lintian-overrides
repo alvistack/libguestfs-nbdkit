@@ -1,0 +1,4 @@
+nbdkit-plugin-python: copyright-without-copyright-notice
+nbdkit-plugin-python: initial-upload-closes-no-bugs
+nbdkit-plugin-python: unusual-interpreter
+nbdkit-plugin-python: zero-byte-file-in-doc-directory

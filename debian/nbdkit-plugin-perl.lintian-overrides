@@ -1,0 +1,3 @@
+nbdkit-plugin-perl: copyright-without-copyright-notice
+nbdkit-plugin-perl: initial-upload-closes-no-bugs
+nbdkit-plugin-perl: zero-byte-file-in-doc-directory

@@ -76,6 +76,10 @@
 #define PAGE_SIZE 32768
 #define L2_SIZE   4096
 
+#ifndef ZSTD_CLEVEL_DEFAULT
+#  define ZSTD_CLEVEL_DEFAULT 3
+#endif
+
 struct l2_entry {
   void *page;                   /* Pointer to compressed data. */
 };

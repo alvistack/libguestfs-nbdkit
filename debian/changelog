@@ -1,0 +1,5 @@
+nbdkit (100:1.29.16-1) UNRELEASED; urgency=medium
+
+  * https://github.com/libguestfs/nbdkit/releases/tag/v1.29.16
+
+ -- Wong Hoi Sing Edison <hswong3i@gmail.com>  Sun, 20 Feb 2022 12:19:23 +0800

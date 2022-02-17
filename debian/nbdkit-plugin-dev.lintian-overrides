@@ -1,0 +1,4 @@
+nbdkit-plugin-dev: copyright-without-copyright-notice
+nbdkit-plugin-dev: initial-upload-closes-no-bugs
+nbdkit-plugin-dev: unusual-interpreter
+nbdkit-plugin-dev: zero-byte-file-in-doc-directory

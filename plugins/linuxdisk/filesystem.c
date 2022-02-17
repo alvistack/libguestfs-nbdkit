@@ -219,7 +219,7 @@ mke2fs (const char *filename)
     return -1;
   }
 
-  fprintf (fp, "mke2fs -q -F -t %s ", type);
+  fprintf (fp, MKE2FS " -q -F -t %s ", type);
   if (label) {
     fprintf (fp, "-L ");
     shell_quote (label, fp);

@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+SHELL := /bin/bash
+
+override_dh_auto_configure:
+	dh_auto_configure -- --disable-vddk --sbindir=/usr/bin MKE2FS=/sbin/mke2fs
+
+override_dh_install:
+	dh_install -X.la
+
+override_dh_auto_test:
+
+override_dh_auto_clean:
+
+%:
+	dh $@ --with autoreconf
