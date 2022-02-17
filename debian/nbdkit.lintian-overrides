@@ -1,0 +1,5 @@
+nbdkit: copyright-without-copyright-notice
+nbdkit: initial-upload-closes-no-bugs
+nbdkit: no-manual-page
+nbdkit: shared-library-lacks-prerequisites
+nbdkit: zero-byte-file-in-doc-directory

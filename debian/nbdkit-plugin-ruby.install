@@ -1,0 +1,2 @@
+/usr/lib/*-*/nbdkit/plugins/nbdkit-ruby-plugin.so
+/usr/share/man/man3/nbdkit-ruby-plugin.3

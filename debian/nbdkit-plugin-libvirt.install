@@ -1,0 +1,2 @@
+/usr/lib/*-*/nbdkit/plugins/nbdkit-libvirt-plugin.so
+/usr/share/man/man1/nbdkit-libvirt-plugin.1

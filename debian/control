@@ -1,0 +1,139 @@
+Source: nbdkit
+Section: admin
+Priority: optional
+Standards-Version: 4.5.0
+Maintainer: Wong Hoi Sing Edison <hswong3i@gmail.com>
+Homepage: https://github.com/libguestfs/nbdkit/tags
+Vcs-Browser: https://github.com/alvistack/libguestfs-nbdkit
+Vcs-Git: https://github.com/alvistack/libguestfs-nbdkit.git
+Build-Depends:
+ debhelper,
+ debhelper-compat (= 10),
+ bash-completion,
+ bsdmainutils <!nocheck>,
+ busybox <!nocheck>,
+ comerr-dev,
+ fuse3,
+ gnutls-bin,
+ jq <!nocheck>,
+ libcurl4-gnutls-dev | libcurl-dev,
+ libext2fs-dev,
+ libgnutls28-dev (>= 3.3),
+ libguestfs-dev (>= 1:1.36.11-3),
+ libguestfs-tools <!nocheck>,
+ liblzma-dev,
+ libnbd-bin <!nocheck>,
+ libnbd-dev,
+ libperl-dev,
+ libselinux1-dev,
+ libssh-dev,
+ libvirt-dev,
+ libzstd-dev,
+ openssh-server <!nocheck>,
+ perl,
+ pkg-config,
+ python3-dev,
+ python3-libnbd <!nocheck>,
+ ruby,
+ ruby-dev,
+ xorriso,
+ zlib1g-dev,
+
+Package: nbdkit
+Architecture: amd64
+Description: toolkit for creating NBD servers
+ NBD is a protocol for accessing block Devices (hard disks and
+ disk-like things) over a network. nbdkit is a multithreaded NBD
+ server with a well-documented, simple plugin API with a stable ABI
+ guarantee that allows for easy creation of "unconventional" block
+ devices.
+ .
+ This package provides the nbdkit binary and a the file, gzip, and xz,
+ plugins.
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Breaks:
+ nbdkit-plugin-perl (<< 1.22),
+Replaces:
+ nbdkit-plugin-perl (<< 1.22),
+Suggests:
+ gcc,
+ jq,
+ nbdkit-plugin-guestfs,
+ nbdkit-plugin-libvirt,
+ nbdkit-plugin-perl,
+ nbdkit-plugin-python,
+ podman,
+ xorriso,
+
+Package: nbdkit-plugin-dev
+Section: libdevel
+Architecture: amd64
+Description: development files for nbdkit
+ Development files, documentation and example code for developing
+ plugins to nbdkit.
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ nbdkit,
+Conflicts:
+ nbdkit (<< 1.1.5-2~),
+
+Package: nbdkit-plugin-perl
+Architecture: amd64
+Description: Perl plugin for nbdkit
+ This plugin allows nbdkit plugins to be written in Perl.
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ nbdkit,
+Conflicts:
+ nbdkit (<< 1.1.5-2~),
+
+Package: nbdkit-plugin-python
+Architecture: amd64
+Description: Python plugin for nbdkit
+ This plugin allows nbdkit plugins to be written in Python.
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ nbdkit,
+ python3-boto3,
+Conflicts:
+ nbdkit (<< 1.1.5-2~),
+
+Package: nbdkit-plugin-libvirt
+Architecture: amd64
+Description: libvirt plugin for nbdkit
+ nbdkit-libvirt-plugin is an nbdkit(1) plugin that makes the contents
+ of libvirt images accessible over NBD.
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ nbdkit,
+Conflicts:
+ nbdkit (<< 1.1.5-2~),
+
+Package: nbdkit-plugin-guestfs
+Architecture: amd64
+Description: libguestfs plugin for nbdkit
+ nbdkit-guestfs-plugin is an nbdkit(1) plugin that makes the contents
+ of disk images accessible over NBD.
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ nbdkit,
+Conflicts:
+ nbdkit (<< 1.1.5-2~),
+
+Package: nbdkit-plugin-ruby
+Architecture: amd64
+Description: Ruby plugin for nbdkit
+ This plugin allows nbdkit plugins to be written in Ruby.
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ nbdkit,
+Conflicts:
+ nbdkit (<< 1.1.5-2~),

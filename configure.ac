@@ -645,12 +645,15 @@ dnl Check for mke2fs -d (used by linuxdisk plugin).  There are two
 dnl possible outcomes that we care about: (1) We have mke2fs and
 dnl it supports the -d option.  (2) We either don't have mke2fs
 dnl or it's too old to support the -d option (eg. on RHEL 7).
+AC_PATH_PROG([MKE2FS], [mke2fs], [no], [$PATH:/usr/local/sbin:/usr/sbin:/sbin])
+AC_MSG_CHECKING([for $MKE2FS supporting the -d option])
 mke2fs_with_d=no
 AS_IF([test "$enable_linuxdisk" != "no"], [
     AC_MSG_CHECKING([for mke2fs supporting the -d option])
-    AS_IF([mke2fs -V >/dev/null 2>&1], [
-        AS_IF([LANG=C mke2fs -d 2>&1 | grep -sq "option requires an argument"], [
+    AS_IF([$MKE2FS -V >/dev/null 2>&1], [
+        AS_IF([LANG=C $MKE2FS -d 2>&1 | grep -sq "option requires an argument"], [
             mke2fs_with_d=yes
+            AC_DEFINE_UNQUOTED([MKE2FS], ["$MKE2FS"], [path to mke2fs binary])
         ])
     ])
     AC_MSG_RESULT([$mke2fs_with_d])

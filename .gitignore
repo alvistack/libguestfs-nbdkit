@@ -175,3 +175,6 @@ plugins/*/*.3
 /tests/test-xz-curl
 /test-driver
 /valgrind/suppressions
+
+plugins/rust/.cargo/
+plugins/rust/vendor/

@@ -1,0 +1,3 @@
+nbdkit-plugin-guestfs: copyright-without-copyright-notice
+nbdkit-plugin-guestfs: initial-upload-closes-no-bugs
+nbdkit-plugin-guestfs: zero-byte-file-in-doc-directory

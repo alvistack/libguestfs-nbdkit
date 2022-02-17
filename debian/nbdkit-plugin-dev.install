@@ -1,0 +1,6 @@
+/usr/share/man/man1/nbdkit-example*-plugin.1
+/usr/lib/*-*/nbdkit/plugins/nbdkit-example*-plugin*
+/usr/lib/*-*/pkgconfig/nbdkit.pc
+/usr/include/nbdkit-*.h
+/usr/share/man/man3/nbdkit-plugin.3
+/usr/share/man/man3/nbdkit-filter.3

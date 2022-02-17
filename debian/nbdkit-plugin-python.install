@@ -1,0 +1,4 @@
+/usr/lib/*-*/nbdkit/plugins/nbdkit-python-plugin.so
+/usr/lib/*-*/nbdkit/plugins/nbdkit-S3-plugin
+/usr/share/man/man3/nbdkit-python-plugin.3
+/usr/share/man/man1/nbdkit-S3-plugin.1

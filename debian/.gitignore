@@ -1,0 +1,15 @@
+*.substvars
+*debhelper*
+.debhelper
+autoreconf.*
+files
+nbdkit
+nbdkit-plugin-dev
+nbdkit-plugin-guestfs
+nbdkit-plugin-libvirt
+nbdkit-plugin-lua
+nbdkit-plugin-perl
+nbdkit-plugin-python
+nbdkit-plugin-ruby
+nbdkit-plugin-tcl
+tmp
